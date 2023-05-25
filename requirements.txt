@@ -39,4 +39,5 @@ uvloop
 watchfiles
 websockets
 wheel
-tensorflow~=2.13.0rc0
+tensorflow
+tensorflow-hub
