@@ -8,7 +8,7 @@ class MoviePreprocessor:
            Preprocesses the movie data by applying text preprocessing to descriptions and categories.
 
            Args:
-               movies (list): List of movie dictionaries.
+               movies (list): List of movie's dictionaries.
                lang (str): the language of the movies description 
            Returns:
                list: Preprocessed movie data.

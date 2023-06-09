@@ -61,16 +61,16 @@ class SpamDetector:
         # Train the model using the vectorized data
         self.model.fit(X_train_vectorized, y_train)
 
-    """
-      Determines if the given text is spam or not.
-
-      Args:
-          text (str): The text to classify.
-
-      Returns:
-          bool: True if the text is classified as spam, False otherwise.
-    """
     def is_spam(self, text):
+        """
+          Determines if the given text is spam or not.
+
+          Args:
+              text (str): The text to classify.
+
+          Returns:
+              bool: True if the text is classified as spam, False otherwise.
+        """
         preprocessed_comment = TextPreprocessor.preprocess(text, lang=self.lang)
         vectorized_comment = self.vectorizer.transform([preprocessed_comment])
         prediction = self.model.predict(vectorized_comment)
